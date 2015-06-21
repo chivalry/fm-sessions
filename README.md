@@ -10,7 +10,11 @@ for each user who connects to the database.
 This fork adds flexibility features. While integration can include the table structure
 included with the module, it can alternatively use an existing table with existing
 fields. It also stores the current session ID in a global variable by default, although
-this can be changed by the integrator.
+this can be changed by the integrator. It also adds the ability to suppress script
+triggers during session manipulation, restoration of calling script error capture and
+allow abort states and removes various custom functions, fields, and scripts that aren't
+required by the module. Finally, it makes use of custom functions instead of a script for
+customized settings as well as for increased readability and self-documenting script code.
 
 Requirements
 ------------
