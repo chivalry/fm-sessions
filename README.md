@@ -7,6 +7,9 @@ Forked by Charles Ross, chivalry@mac.com
 A FileMaker module that provides the table and scripting to maintain a Session record
 for each user who connects to the database.
 
+The latest development build and release can always be found on
+[GitHub](https://github.com/chivalry/fm-sessions).
+
 This fork adds flexibility features. While integration can include the table structure
 included with the module, it can alternatively use an existing table with existing
 fields. It also stores the current session ID in a global variable by default, although
@@ -134,6 +137,18 @@ that sets a global variable is found in both `sess.TrigEnable` and `sess.TrigDis
 
     If you are returning `False` with `sess.DisableTriggers`, you can delete the
 `sess.Trig*` and `trig*` custom functions.
+
+### Running the Test Script
+
+If you've made changes to the custom functions and want to make sure, to some extent at
+least, that all of the settings work, run the `FMSess: Test Settings` script. This will
+check the following:
+
+- That the named layout is not empty, is an existing layout and is uniquely named.
+- That the two required field settings refer to actual fields that are accessible from
+the named layout.
+- That the current ID storage is either a global variable or a global field.
+- That the calculation code stored in sess.TrigDisable and sess.TrigEnable is executable. 
 
 ### Setting up Script Execution
 
