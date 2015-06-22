@@ -10,7 +10,8 @@ logged into a database system and will eventually be the basis for a general Per
 Script on Client module.
 
 The latest development build and release can always be found on
-[GitHub](https://github.com/chivalry/fm-sessions).
+[GitHub](https://github.com/chivalry/fm-sessions), where you'll also find a more readable
+version of this documentation.
 
 This fork adds flexibility features to Todd Geist's original
 [Sessions module](http://www.modularfilemaker.org/module/sessions/). While integration
@@ -159,13 +160,6 @@ the named layout.
 By now you should have everything ready and can configure your file to use the sessions
 feature. Simply add calls to `FMSess: OnFirstWindowOpen` and `FMSess: OnLastWindowClose`
 to your own scripts that are connected to those script triggers.
-
-Development Roadmap
--------------------
-
-Features I hope to add in a future version:
-
-- A testing script that ensures that all of the settings work properly.
 
 License
 -------
