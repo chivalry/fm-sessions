@@ -81,7 +81,7 @@ overriding the defaults of each setting are found below.
 - Current Session ID Storage
 
     This setting is found in the `sess.CurrentIDStorage` custom function and returns the 
-name* of the storage location, not the storage location itself. By default it returns
+*name* of the storage location, not the storage location itself. By default it returns
 `"$$_CURRENT_SESION_ID"` (note that it's quoted). If you use a different global variable
 naming convention, just set the name you want the current session ID store in here. You
 must include the double dollar sign.
@@ -102,7 +102,7 @@ unique within your solution.
 
     Use `sess.PrimaryKeyFieldName` to return the name of the primary key field of your
 sessions table. Best practices advise using `GetFieldName` to provide a direct reference
-to the field in case you later change itj
+to the field in case you later change it.
 
 - Persistent ID Field Name
 
@@ -132,14 +132,25 @@ only re-enables them once each script that disabled them also enables them.
 perform the needed actions. A commented-out example of doing so with a `Let` function
 that sets a global variable is found in both `sess.TrigEnable` and `sess.TrigDisable`.
 
+    If you are returning `False` with `sess.DisableTriggers`, you can delete the
+`sess.Trig*` and `trig*` custom functions.
+
 ### Setting up Script Execution
 
 By now you should have everything ready and can configure your file to use the sessions
 feature. Simply add calls to `FMSess: OnFirstWindowOpen` and `FMSess: OnLastWindowClose`
 to your own scripts that are connected to those script triggers.
 
+Development Roadmap
+-------------------
+
+Features I hope to add in a future version:
+
+- A testing script that ensures that all of the settings work properly.
+
 License
 -------
+
 The MIT License (MIT)  
 Copyright (c) 2013 Todd Geist, todd@geistinteractive.com  
 Copyright (c) 2015 Charles Ross, chivalry@mac.com
